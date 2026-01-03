@@ -4,6 +4,7 @@ import '../providers/auth_provider.dart';
 import '../services/api_service.dart';
 import '../models/attendance.dart';
 import 'package:intl/intl.dart';
+import '../widgets/custom_loading_indicator.dart';
 import '../utils/app_theme.dart';
 
 class AttendanceHistoryScreen extends StatefulWidget {
@@ -55,7 +56,7 @@ class _AttendanceHistoryScreenState extends State<AttendanceHistoryScreen> {
       body: RefreshIndicator(
         onRefresh: _loadHistory,
         child: _isLoading
-            ? const Center(child: CircularProgressIndicator())
+            ? const Center(child: CustomLoadingIndicator())
             : _error != null
                 ? Center(
                     child: Column(

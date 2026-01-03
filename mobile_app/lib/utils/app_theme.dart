@@ -15,15 +15,16 @@ class AppTheme {
   static const iosDarkSurface = Color(0xFF1C1C1E);
   static const iosDarkBlue = Color(0xFF0A84FF);
 
+  // Biznet Brand Colors
+  static const Color biznetBlue = Color(0xFF1A1F71); // Dark Blue (Dominant)
+  static const Color biznetLightBlue = Color(0xFF00ADEE); // Light Blue (Accent)
+  
   // Text Styles
   // White & Blue Minimalist Colors
-  static const Color primaryBlue = Color(0xFF2563EB); // Royal Blue (Premium)
-  static const Color backgroundLight = Colors.white; // Pure White
+  static const Color primaryBlue = biznetBlue; 
+  static const Color accentBlue = biznetLightBlue;
+  static const Color backgroundLight = Colors.white; 
   static const Color cardSurface = Colors.white;
-  
-  // Accents (Little bit of blue)
-  static const Color accentBlue = Color(0xFFEFF6FF); // Very light blue background
-  static const Color lightBlue = Color(0xFFE3F2FD); // Added back for compatibility
   
   static const Color textDark = Color(0xFF1E293B); // Slate 800
   static const Color textGrey = Color(0xFF64748B); // Slate 500

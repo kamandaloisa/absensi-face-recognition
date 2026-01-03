@@ -151,10 +151,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> with TickerProvider
                   child: Container(
                     height: 280,
                     width: 280,
-                    decoration: BoxDecoration(
-                      color: AppTheme.lightBlue.withOpacity(0.3), // Softer background
-                      shape: BoxShape.circle,
-                    ),
                     padding: const EdgeInsets.all(40), // Padding for the logo
                     child: Image.asset(
                       'assets/images/biznet_symbol.png',

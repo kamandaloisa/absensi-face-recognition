@@ -6,6 +6,7 @@ import 'screens/onboarding_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/admin_dashboard_screen.dart';
 import 'utils/app_theme.dart';
+import 'widgets/custom_loading_indicator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -60,9 +61,7 @@ class _AuthWrapperState extends State<AuthWrapper> {
                 ),
               ),
               child: const Center(
-                child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                ),
+                child: CustomLoadingIndicator(color: Colors.white, size: 40),
               ),
             ),
           );

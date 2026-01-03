@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'dart:async';
 import '../utils/app_theme.dart';
+import '../widgets/custom_loading_indicator.dart';
 
 class FaceRecognitionScreen extends StatefulWidget {
   final bool isCheckIn;
@@ -156,7 +157,7 @@ class _FaceRecognitionScreenState extends State<FaceRecognitionScreen> with Sing
             )
           else
             const Center(
-              child: CircularProgressIndicator(color: Colors.white),
+              child: CustomLoadingIndicator(color: Colors.white, size: 40),
             ),
 
           // Face Frame Overlay
@@ -295,10 +296,7 @@ class _FaceRecognitionScreenState extends State<FaceRecognitionScreen> with Sing
                   const SizedBox(
                     width: 80,
                     height: 80,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 4,
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                    ),
+                    child: CustomLoadingIndicator(color: Colors.white, size: 40),
                   )
                 else
                   Container(

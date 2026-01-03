@@ -5,6 +5,7 @@ import '../services/api_service.dart';
 import '../models/user.dart';
 import 'package:intl/intl.dart';
 import '../utils/app_theme.dart';
+import '../widgets/custom_loading_indicator.dart';
 
 class LeaveRequestScreen extends StatefulWidget {
   const LeaveRequestScreen({super.key});
@@ -282,14 +283,7 @@ class _LeaveRequestScreenState extends State<LeaveRequestScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 16),
                   ),
                   child: _isSubmitting
-                      ? const SizedBox(
-                          height: 20,
-                          width: 20,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                          ),
-                        )
+                      ? const CustomLoadingIndicator(size: 20, color: Colors.white)
                       : const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
